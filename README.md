@@ -1,12 +1,72 @@
-# React + Vite
+# README - Portifólio 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal desenvolvido com **React** e **Vite**. 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias utilizadas
+- **React** 
+- **Vite** — bundler/dev server
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🗂️ Estrutura de diretórios atual
+```text
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   └── Sidebar/
+│   │       ├── Sidebar.css
+│   │       └── Sidebar.jsx
+│   ├── config/
+│   │   └── sidebarConfig.js
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── variables.css
+│   ├── App.jsx
+│   └── main.jsx
+
+```
+
+**Destaques**
+- `src/components/Sidebar/` — componente e estilos da barra lateral.  
+- `src/config/sidebarConfig.js` — configuração de itens do menu e perfil 
+- `src/styles/` — estilos globais e variáveis.   
+
+---
+
+## 🛠️ Como rodar localmente
+
+### Pré-requisitos
+- **Node.js - inclui o npm**
+
+### Passos
+```bash
+# 1) Instalar dependências
+npm install
+
+# 2) Rodar em modo desenvolvimento
+npm run dev
+# O Vite mostrará a URL local, algo como: http://localhost:5173/
+
+```
+
+---
+
+## ☁️ Link do site publicado (produção)
+Ainda não publicado.
+ **TODO:** adicionar o link quando fizer o deploy 
+
+---
+
+## 📄 Licença
+Este projeto está licenciado sob a **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
+
+🔗 [Leia a licença completa](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+
+---
+
+## 🙌 Créditos
+Criado por **Rodrigo Franchini** na disciplina Laboratório de desenvolvimento de software.
