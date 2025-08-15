@@ -1,6 +1,6 @@
 # README - Portifólio 
 
-Portfólio pessoal desenvolvido com **React** e **Vite**. 
+Portfólio pessoal desenvolvido com **React** e **Vite** como parte da disciplina Laboratório de desenvolvimento de software - PUC Minas.
 
 ---
 
