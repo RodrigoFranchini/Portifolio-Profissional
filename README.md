@@ -20,7 +20,7 @@ Portfólio pessoal desenvolvido com **React** e **Vite** como parte da disciplin
 │   │       ├── Sidebar.css
 │   │       └── Sidebar.jsx
 │   ├── config/
-│   │   └── sidebarConfig.js
+│   │   └── Config.js
 │   ├── styles/
 │   │   ├── global.css
 │   │   └── variables.css
@@ -31,7 +31,7 @@ Portfólio pessoal desenvolvido com **React** e **Vite** como parte da disciplin
 
 **Destaques**
 - `src/components/Sidebar/` — componente e estilos da barra lateral.  
-- `src/config/sidebarConfig.js` — configuração de itens do menu e perfil 
+- `src/config/Config.js` — configuração de itens do menu e perfil 
 - `src/styles/` — estilos globais e variáveis.   
 
 ---

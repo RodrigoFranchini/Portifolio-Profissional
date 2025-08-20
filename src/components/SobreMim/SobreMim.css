@@ -1,0 +1,26 @@
+.sobre-mim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.sobre-mim__imagem img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sobre-mim__texto {
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+    .sobre-mim__imagem img {
+        width: 150px;
+        height: 150px;
+    }
+}

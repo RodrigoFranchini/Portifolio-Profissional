@@ -3,7 +3,7 @@ import {
   FaHome, FaIdBadge, FaFolderOpen, FaInfoCircle, FaPaperPlane,
   FaAngleDoubleLeft, FaAngleDoubleRight
 } from "react-icons/fa";
-import { profile, navItems } from "../../config/sidebarConfig"; 
+import { profile, navItems } from "../../config/Config.js";
 import "./Sidebar.css";
 
 const iconMap = {
@@ -32,7 +32,14 @@ export default function Sidebar() {
 
         <nav className="sidebar__nav">
           {navItems.map((it) => (
-            <button key={it.key} className="nav__item" type="button">
+            <button key={it.key} className="nav__item" type="button"
+                    onClick={() => {
+                        const section = document.getElementById(it.key);
+                        if (section) {
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}
+            >
               <span className="nav__icon">{iconMap[it.icon]}</span>
               {expanded && <span className="nav__label">{it.label}</span>}
             </button>
