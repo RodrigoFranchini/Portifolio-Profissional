@@ -5,6 +5,15 @@ export const profile = {
   role: "Desenvolvedor",
 };
 
+// Define os ícones da sidebar
+export const navItems = [
+  { key: "home", label: "Home", icon: "home" },
+  { key: "projects", label: "Projetos", icon: "folder" },
+  { key: "career", label: "Carreira", icon: "id" },
+  { key: "about", label: "Sobre", icon: "info" },
+  { key: "contact", label: "Contato", icon: "send" },
+];
+
 
 export const sobremim = {
   texto1: "Desenvolvedor apaixonado por criar soluções inovadoras e eficientes.",
@@ -30,14 +39,42 @@ export const tecnologias = [
   }
 ];
 
-
-
-
-// Define os ícones da sidebar
-export const navItems = [
-  { key: "home",    label: "Home",     icon: "home"   },
-  { key: "career",  label: "Carreira", icon: "id"     },
-  { key: "projects",label: "Projetos", icon: "folder" },
-  { key: "about",   label: "Sobre",    icon: "info"   },
-  { key: "contact", label: "Contato",  icon: "send"   },
+// Lista de projetos do portfólio
+export const projetos = [
+  {
+    id: "ecommerce-api",
+    nome: "E-commerce API",
+    descricao:
+      "API robusta para plataforma de e-commerce, gerenciando produtos, pedidos e pagamentos.",
+    tecnologias: ["Python", "Django", "PostgreSQL"],
+    github: "https://github.com/seu-usuario/ecommerce-api",
+    imagem: "/images/projects/ecommerce.jpg" // opcional
+  },
+  {
+    id: "social-media-backend",
+    nome: "Social Media Backend",
+    descricao:
+      "Backend para rede social, com perfis, posts e interações.",
+    tecnologias: ["Node.js", "Express", "MongoDB"],
+    github: "https://github.com/seu-usuario/social-media-backend",
+    imagem: "/images/projects/social.jpg" // opcional
+  },
+  {
+    id: "data-pipeline",
+    nome: "Data Analysis Pipeline",
+    descricao:
+      "Pipeline para processamento e análise de grandes volumes de dados.",
+    tecnologias: ["Java", "Spring Boot", "Apache Kafka"],
+    github: "https://github.com/seu-usuario/data-analysis-pipeline",
+    imagem: "/images/projects/data-pipeline.jpg" // opcional
+  },
+  {
+    id: "auth-service",
+    nome: "Authentication Service",
+    descricao:
+      "Serviço de autenticação com múltiplos métodos e gestão de usuários.",
+    tecnologias: ["Python", "Flask", "JWT"],
+    github: "https://github.com/seu-usuario/auth-service",
+    imagem: "/images/projects/auth.jpg" // opcional
+  }
 ];

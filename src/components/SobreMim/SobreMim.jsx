@@ -7,7 +7,7 @@ export default function SobreMim() {
         <section id = "home">
         <section className="sobre-mim">
             <div className="sobre-mim__imagem">
-                <img src="./././public/images/HomeFoto.png" alt="Rodrigo Franchini" />
+                <img src="src\images\home\HomeFoto.png" alt="Rodrigo Franchini" />
             </div>
             <div className="sobre-mim__texto">
                 <h2 className="sobre-mim__titulo">{profile.name}</h2>
