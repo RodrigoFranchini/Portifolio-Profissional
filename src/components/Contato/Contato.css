@@ -1,0 +1,115 @@
+.contato {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.contato__header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.contato__header p {
+  margin: 0 0 24px;
+  opacity: 0.85;
+}
+
+/* Ícones */
+.contato__icons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 1.1rem;
+  transition: transform 0.12s ease, border-color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+.contact-icon:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Formulário */
+.contato__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.form-row input,
+.form-row textarea {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 12px;
+  color: inherit;
+  outline: none;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  border-color: rgba(88, 224, 163, 0.45);
+  box-shadow: 0 0 0 3px rgba(88, 224, 163, 0.12);
+}
+
+/* Botão */
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-send:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.btn-send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Status */
+.form-status {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+}
+.form-status--success { color: #6fe8b2; }
+.form-status--error { color: #ff8b8b; }
+
+/* Responsivo */
+@media (max-width: 720px) {
+  .contato__form {
+    padding: 16px;
+  }
+}

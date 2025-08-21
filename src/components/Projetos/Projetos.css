@@ -27,14 +27,25 @@
 
 /* Card */
 .projeto-card {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 24px;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  padding: 18px;
+  background: transparent;         /* fundo transparente */
+    border: 1px solid #334155;       /* borda fina em cinza-azulado */
+    border-radius: 8px;              /* cantos levemente arredondados */
+    padding: 16px 20px;
+    color: #e2e8f0;                  /* texto claro */
+    display: flex;
+    flex: 1 1 calc(20% - 12px);
+    align-items: center;
+    text-align: left;
+    gap: 8px;                        /* espaço entre ícone e texto */
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.projeto-card:hover{
+    border-color: #38bdf8;           /* azul claro no hover */
+    background: rgba(56, 189, 248, 0.1); /* leve fundo azul translúcido */
+    transform: translateY(-3px);     /* efeito sutil de flutuar */
 }
 
 .projeto-card__title {
