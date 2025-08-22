@@ -12,27 +12,49 @@ Portfólio pessoal desenvolvido com **React** e **Vite** como parte da disciplin
 
 ## 🗂️ Estrutura de diretórios atual
 ```text
-├── public/
-│   └── vite.svg
+
 ├── src/
-│   ├── components/
-│   │   └── Sidebar/
-│   │       ├── Sidebar.css
-│   │       └── Sidebar.jsx
-│   ├── config/
-│   │   └── Config.js
-│   ├── styles/
-│   │   ├── global.css
-│   │   └── variables.css
-│   ├── App.jsx
-│   └── main.jsx
+├── components/
+│   ├── Carreira/
+│   │   ├── Carreira.css
+│   │   └── Carreira.jsx
+│   ├── Contato/
+│   │   ├── Contato.css
+│   │   └── Contato.jsx
+│   ├── Projetos/
+│   │   ├── Projetos.css
+│   │   └── Projetos.jsx
+│   ├── Sidebar/
+│   │   ├── Sidebar.css
+│   │   └── Sidebar.jsx
+│   └── SobreMim/
+│       ├── SobreMim.css
+│       └── SobreMim.jsx
+│
+├── config/
+│   └── Config.js
+├── images/
+│   ├── home/
+│   │   └── HomeFoto.png
+│   └── projects/
+│       ├── Cursosapi.png
+│       ├── HOExtra.png
+│       ├── Java-Atividades.png
+│       └── web-full-stack.png
+├── styles/
+│   ├── global.css
+│   └── variables.css
+├── App.jsx
+└── main.jsx
+
 
 ```
 
-**Destaques**
-- `src/components/Sidebar/` — componente e estilos da barra lateral.  
-- `src/config/Config.js` — configuração de itens do menu e perfil 
-- `src/styles/` — estilos globais e variáveis.   
+
+
+## Destaques do projeto
+- Estrutura modular com **componentes reutilizáveis**.
+- Configuração centralizada via **Config.js**.
 
 ---
 
