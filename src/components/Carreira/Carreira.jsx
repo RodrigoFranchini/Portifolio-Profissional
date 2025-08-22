@@ -7,10 +7,6 @@ export default function Carreira() {
     <section id="career" className="carreira">
       <header className="carreira__header">
         <h1>Carreira</h1>
-        <p>
-          Espaço para relatar experiências profissionais, estágios, freelas,
-          participações em projetos open source ou eventos técnicos.
-        </p>
       </header>
 
       <ul className="carreira__lista">

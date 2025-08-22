@@ -14,7 +14,6 @@
   opacity: 0.85;
 }
 
-/* Ícones */
 .contato__icons {
   display: flex;
   gap: 14px;
@@ -40,7 +39,6 @@
   background: rgba(255, 255, 255, 0.07);
 }
 
-/* Formulário */
 .contato__form {
   display: grid;
   grid-template-columns: 1fr;
@@ -78,7 +76,6 @@
   box-shadow: 0 0 0 3px rgba(88, 224, 163, 0.12);
 }
 
-/* Botão */
 .btn-send {
   display: inline-flex;
   align-items: center;
@@ -99,7 +96,6 @@
   cursor: not-allowed;
 }
 
-/* Status */
 .form-status {
   margin: 4px 0 0;
   font-size: 0.95rem;

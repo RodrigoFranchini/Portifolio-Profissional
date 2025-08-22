@@ -10,7 +10,7 @@ export default function Projetos() {
         <h1>Projetos</h1>
         <p>
           Uma vitrine do meu trabalho, destacando minhas habilidades e
-          experiência em desenvolvimento back-end.
+          experiência em desenvolvimento front e back-end.
         </p>
       </header>
 

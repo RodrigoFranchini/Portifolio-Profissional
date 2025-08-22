@@ -21,101 +21,59 @@ export const sobremim = {
   texto2eng:"With experience in various technologies, I am constantly striving to enhance both my technical and interpersonal skills by exploring new tools, languages, and methodologies. My goal is to apply this knowledge in a practical and creative way, contributing to the development of robust, scalable, and innovative solutions. I am highly motivated to take part in challenging projects that allow me to continuously learn while creating a positive impact for people and organizations."
 }
 
-// Define as tecnologias
-export const tecnologias = [
-  {
-    name: "Databases",
-    description: "Conhecimento em bancos de dados relacionais e não-relacionais."
-  },
-  {
-    name: "Cloud Services",
-    description: "Trabalho com ambientes em nuvem e integrações."
-  },
-  {
-    name: "Programming Languages",
-    description: "Experiência com várias linguagens de programação."
-  },
-  {
-    name: "Tools",
-    description: "Ferramentas para otimização de desenvolvimento."
-  }
-];
-
 // Lista de projetos do portfólio
 export const projetos = [
   {
-    id: "ecommerce-api",
-    nome: "E-commerce API",
+    id: "curso-api",
+    nome: "Curso API",
     descricao:
-      "API robusta para plataforma de e-commerce, gerenciando produtos, pedidos e pagamentos.",
-    tecnologias: ["Python", "Django", "PostgreSQL"],
-    github: "https://github.com/seu-usuario/ecommerce-api",
-    imagem: "/images/projects/ecommerce.jpg" // opcional
+      "API RESTful desenvolvida com Spring Boot, a API permite gerenciar cursos, sendo projetada para ser facilmente extensível.",
+    tecnologias: ["Java", "Spring Boot", "H2"],
+    github: "https://github.com/RodrigoFranchini/curso-api-spring",
+    imagem: "/src/images/projects/Cursosapi.png" 
   },
   {
-    id: "social-media-backend",
-    nome: "Social Media Backend",
+    id: "sistema-login-firebase",
+    nome: "Sistema de Login com Firebase",
     descricao:
-      "Backend para rede social, com perfis, posts e interações.",
-    tecnologias: ["Node.js", "Express", "MongoDB"],
-    github: "https://github.com/seu-usuario/social-media-backend",
-    imagem: "/images/projects/social.jpg" // opcional
+      "Sistema de login utilizando a plataforma Firebase, permitindo aos usuários realizar cadastro e acesso direto.",
+    tecnologias: ["HTML, CSS, Javascript", "Node.js", "Firebase"],
+    github: "https://github.com/RodrigoFranchini/HOEX",
+    imagem: "/src/images/projects/HOExtra.png" 
   },
   {
-    id: "data-pipeline",
-    nome: "Data Analysis Pipeline",
+    id: "desenvolvimento-web-full-stack",
+    nome: "Desenvolvimento Web Full Stack",
     descricao:
-      "Pipeline para processamento e análise de grandes volumes de dados.",
-    tecnologias: ["Java", "Spring Boot", "Apache Kafka"],
-    github: "https://github.com/seu-usuario/data-analysis-pipeline",
-    imagem: "/images/projects/data-pipeline.jpg" // opcional
+      "Projeto de documentação e desenvolvimento de uma aplicação para a matéria Desenvolvimento Web.",
+    tecnologias: ["React", "Node.js"],
+    github: "https://github.com/RodrigoFranchini/Projeto-Dev.-Web-Full-Stack",
+    imagem: "/src/images/projects/web-full-stack.png" 
   },
   {
-    id: "auth-service",
-    nome: "Authentication Service",
+    id: "java-atividades",
+    nome: "Java Atividades",
     descricao:
-      "Serviço de autenticação com múltiplos métodos e gestão de usuários.",
-    tecnologias: ["Python", "Flask", "JWT"],
-    github: "https://github.com/seu-usuario/auth-service",
-    imagem: "/images/projects/auth.jpg" // opcional
+      "Coletânea de atividades desenvolvidas em Java e utilizando JFrame (GUI).",
+    tecnologias: ["Java"],
+    github: "https://github.com/RodrigoFranchini/Java-Atividades",
+    imagem: "/src/images/projects/Java-Atividades.png" 
   }
 ];
 
+// Define os dados da carreira
 export const carreira = [
   {
     id: "exp1",
-    empresa: "Tech Company",
-    cargo: "Desenvolvedor Front-end",
-    periodo: "Jan 2022 – Atual",
+    empresa: "Assembleia Legislativa do Estado de Minas Gerais",
+    cargo: "Estagiário",
+    periodo: "Dez 2023 – Março 2025",
     descricao:
-      "Responsável pelo desenvolvimento e manutenção de interfaces web responsivas, utilizando React, Vite e integração com APIs REST."
-  },
-  {
-    id: "exp2",
-    empresa: "Startup XYZ",
-    cargo: "Estagiário em Desenvolvimento",
-    periodo: "Ago 2021 – Dez 2021",
-    descricao:
-      "Atuei no desenvolvimento de features para aplicação interna, correção de bugs e suporte técnico, utilizando Node.js e MongoDB."
-  },
-  {
-    id: "exp3",
-    empresa: "Freelancer",
-    cargo: "Desenvolvedor Full-stack",
-    periodo: "2020 – 2021",
-    descricao:
-      "Desenvolvimento de sites institucionais e sistemas sob demanda para clientes, aplicando boas práticas de UI/UX e deploy em cloud."
-  },
-  {
-    id: "exp4",
-    empresa: "Comunidade Open Source",
-    cargo: "Contribuidor",
-    periodo: "2019 – 2020",
-    descricao:
-      "Participei de projetos open source no GitHub, contribuindo com correções, documentação e novas funcionalidades."
+      "Suporte ao time de analistas e aos softwares do órgão, com foco na automação de workflows e criação de dashboards para acompanhamento de indicadores.."
   }
 ];
 
+// Define os dados do contato
 export const contatos = {
   email: "rofranchinicecchin@gmail.com",
   whatsapp: "5531999539901", 

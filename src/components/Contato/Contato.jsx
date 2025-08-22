@@ -12,7 +12,6 @@ export default function Contato() {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
-  // Inicializa a lib (algumas versões precisam disso)
   useEffect(() => {
     try {
       if (publicKey && emailjs.init) {
@@ -43,7 +42,6 @@ export default function Contato() {
     e.preventDefault();
     const form = formRef.current;
 
-    // Diagnóstico de ENV
     if (!publicKey || !serviceId || !templateId) {
       console.warn("ENV ausente:", { publicKey, serviceId, templateId });
       setStatus({
@@ -63,7 +61,6 @@ export default function Contato() {
     try {
       setStatus({ type: "loading", message: "Enviando..." });
 
-      // Opcional: envia também um 'title' para usar no Subject do template
       if (!form.title) {
         const hidden = document.createElement("input");
         hidden.type = "hidden";
@@ -117,7 +114,6 @@ export default function Contato() {
       </div>
 
       <form ref={formRef} className="contato__form" onSubmit={onSubmit} noValidate>
-        {/* Estes names PRECISAM bater com o template */}
         <div className="form-row">
           <label htmlFor="from_name">Nome</label>
           <input id="from_name" name="from_name" type="text" placeholder="Seu nome" required />
