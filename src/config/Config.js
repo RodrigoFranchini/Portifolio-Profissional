@@ -16,9 +16,9 @@ export const navItems = [
 // Define o texto que irá aparecer na seção sobre mim
 export const sobremim = {
   texto1ptbr: "Desenvolvedor apaixonado por criar soluções inovadoras e eficientes.",
-  texto2ptbr: "Com experiência em diversas tecnologias, busco constantemente aprimorar minhas habilidades técnicas e interpessoais, explorando novas ferramentas, linguagens e metodologias. Meu objetivo é aplicar esse conhecimento de forma prática e criativa, contribuindo para o desenvolvimento de soluções robustas, escaláveis e inovadoras. Tenho grande motivação em participar de projetos desafiadores que me permitam aprender continuamente e, ao mesmo tempo, gerar impacto positivo para pessoas e empresas.",
+  texto2ptbr: "Com experiência em diversas tecnologias, busco constantemente aprimorar minhas habilidades técnicas e interpessoais, explorando novas ferramentas, linguagens e metodologias. Meu objetivo é aplicar esse conhecimento de forma prática e criativa, contribuindo para o desenvolvimento de soluções robustas, escaláveis e inovadoras.",
   texto1eng:"Developer passionate about creating innovative and efficient solutions.",
-  texto2eng:"With experience in various technologies, I am constantly striving to enhance both my technical and interpersonal skills by exploring new tools, languages, and methodologies. My goal is to apply this knowledge in a practical and creative way, contributing to the development of robust, scalable, and innovative solutions. I am highly motivated to take part in challenging projects that allow me to continuously learn while creating a positive impact for people and organizations."
+  texto2eng:"With experience in various technologies, I am constantly striving to enhance both my technical and interpersonal skills by exploring new tools, languages, and methodologies. My goal is to apply this knowledge in a practical and creative way, contributing to the development of robust, scalable, and innovative solutions."
 }
 
 // Lista de projetos do portfólio
