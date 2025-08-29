@@ -1,68 +1,95 @@
+/* ===== Container ===== */
 .sidebar {
   position: fixed;
-  inset: 0 auto 0 0;
-  width: 72px;
-  background: var(--sidebar);
-  border-right: 1px solid var(--sidebar-2);
+  inset: 12px auto 12px 12px; /* dá respiro da borda da janela */
+  width: var(--sb-collapsed);
+  background: color-mix(in oklab, var(--sidebar) 85%, transparent); /* fallback visualmente agradável */
+  border: 1px solid color-mix(in oklab, var(--sidebar-2) 70%, transparent);
+  border-radius: 16px; /* cantos arredondados deixam mais moderno */
   display: grid;
   grid-template-rows: 1fr auto;
-  transition: width 220ms ease-in-out;
+  transition: width var(--sb-dur) var(--sb-ease), box-shadow 200ms ease;
+  will-change: width;
   z-index: 30;
+
+  /* glassy */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* sombra suave */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.24),
+    0 2px 8px rgba(0,0,0,.18);
+
+  /* evita reflows grandes */
+  contain: layout paint;
 }
 
 .sidebar.expanded {
-  width: 240px;
+  width: var(--sb-expanded);
 }
 
+/* rolagem invisível se o conteúdo crescer */
 .sidebar__content {
-  overflow: hidden;
+  overflow: auto;
   padding: 12px 8px;
+  scrollbar-width: none; /* Firefox */
 }
+.sidebar__content::-webkit-scrollbar { display: none; } /* WebKit */
 
+
+/* ===== Brand / Header ===== */
 .sidebar__brand {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 8px;
-  margin: 4px 4px 12px;
-  border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+  margin: 2px 4px 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), transparent);
 }
 
 .brand__avatar {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
-  background: var(--sidebar-2);
+  background: color-mix(in oklab, var(--sidebar-2) 90%, transparent);
   color: var(--accent);
   font-weight: 700;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 20%, transparent);
 }
 
+/* animação suave do texto */
 .brand__text {
   display: grid;
   line-height: 1.1;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity var(--sb-dur) var(--sb-ease),
+    transform var(--sb-dur) var(--sb-ease);
+}
+.sidebar.expanded .brand__text {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.brand__title {
-  font-weight: 700;
-  font-size: .95rem;
-}
+.brand__title { font-weight: 700; font-size: .95rem; }
+.brand__subtitle { color: var(--muted); font-size: .75rem; margin-top: 2px; }
 
-.brand__subtitle {
-  color: var(--muted);
-  font-size: .75rem;
-  margin-top: 2px;
-}
 
+/* ===== Navegação ===== */
 .sidebar__nav {
   display: grid;
   gap: 6px;
   margin-top: 8px;
+  padding-bottom: 8px;
 }
 
+/* botão base */
 .nav__item {
   all: unset;
   cursor: pointer;
@@ -71,38 +98,100 @@
   gap: 12px;
   padding: 10px 12px;
   margin: 0 4px;
-  border-radius: 10px;
+  border-radius: 12px;
   color: var(--text);
+  position: relative;
+  transition:
+    transform 150ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease;
 }
 
+/* hover com leve elevação */
 .nav__item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in oklab, #ffffff 8%, transparent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
 }
 
+/* estado ativo – use data-active="true" ou class (ajuste conforme seu JSX) */
+.nav__item[data-active="true"],
+.nav__item.is-active {
+  background: color-mix(in oklab, var(--accent) 10%, transparent);
+  color: color-mix(in oklab, var(--text) 92%, white 8%);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 40%, transparent);
+}
+
+/* foco acessível */
+.nav__item:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--accent) 65%, white 15%);
+  outline-offset: 2px;
+}
+
+/* ícone com micro interação */
 .nav__icon {
   font-size: 18px;
   width: 28px;
   display: inline-grid;
   place-items: center;
+  transition: transform 160ms var(--sb-ease), opacity 160ms var(--sb-ease);
 }
+.nav__item:hover .nav__icon { transform: scale(1.06); }
 
+/* label com fade/slide + pointer gating */
 .nav__label {
   font-size: .93rem;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity var(--sb-dur) var(--sb-ease),
+    transform var(--sb-dur) var(--sb-ease);
+  pointer-events: none;
+}
+.sidebar.expanded .nav__label {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
+/* stagger sutil nos itens quando expande */
+.sidebar.expanded .sidebar__nav .nav__item:nth-child(1) .nav__label { transition-delay: 30ms; }
+.sidebar.expanded .sidebar__nav .nav__item:nth-child(2) .nav__label { transition-delay: 60ms; }
+.sidebar.expanded .sidebar__nav .nav__item:nth-child(3) .nav__label { transition-delay: 90ms; }
+.sidebar.expanded .sidebar__nav .nav__item:nth-child(4) .nav__label { transition-delay: 120ms; }
+.sidebar.expanded .sidebar__nav .nav__item:nth-child(5) .nav__label { transition-delay: 150ms; }
+
+
+/* ===== Toggle ===== */
 .sidebar__toggle {
   all: unset;
   cursor: pointer;
   display: grid;
   place-items: center;
-  margin: 8px;
-  height: 36px;
-  border-radius: 10px;
-  border: 1px solid var(--sidebar-2);
-  background: #0e1720;
+  margin: 10px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in oklab, var(--sidebar-2) 80%, transparent);
+  background: color-mix(in oklab, #0e1720 85%, transparent);
   color: var(--text);
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 200ms var(--sb-ease);
+}
+.sidebar__toggle:hover {
+  background: color-mix(in oklab, #0b131b 90%, transparent);
 }
 
-.sidebar__toggle:hover {
-  background: #0b131b;
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .brand__text,
+  .nav__label,
+  .nav__icon,
+  .sidebar__toggle {
+    transition: none !important;
+    transform: none !important;
+  }
 }
