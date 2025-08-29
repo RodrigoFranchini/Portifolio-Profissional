@@ -17,10 +17,9 @@ const iconMap = {
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
   const [current, setCurrent] = useState(navItems?.[0]?.key || null);
-  const currentRef = useRef(current);         // evita setState desnecessário
+  const currentRef = useRef(current);        
   const sidebarRef = useRef(null);
 
-  // Fecha a sidebar ao clicar fora
   useEffect(() => {
     function handleClickOutside(event) {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -33,7 +32,6 @@ export default function Sidebar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [expanded]);
 
-  // ===== Detecção robusta da seção ativa =====
   useEffect(() => {
     const sections = navItems
       .map(it => document.getElementById(it.key))
@@ -42,7 +40,6 @@ export default function Sidebar() {
 
     let ticking = false;
 
-    // fração da tela usada como “âncora” (0.5 = centro da viewport)
     const ANCHOR_FRACTION = 0.5;
 
     const updateActive = () => {
@@ -80,7 +77,6 @@ export default function Sidebar() {
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
-    // inicial
     updateActive();
 
     return () => {
@@ -118,7 +114,6 @@ export default function Sidebar() {
                 if (section) {
                   section.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
-                // marca imediatamente ao clicar (scroll confirmará em seguida)
                 currentRef.current = it.key;
                 setCurrent(it.key);
                 setExpanded(false);

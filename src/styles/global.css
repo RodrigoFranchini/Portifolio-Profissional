@@ -1,6 +1,5 @@
 @import "./variables.css";
 
-/* resets e estilos globais */
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
 body {

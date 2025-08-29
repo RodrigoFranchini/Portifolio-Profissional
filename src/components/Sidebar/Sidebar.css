@@ -1,27 +1,23 @@
-/* ===== Container ===== */
 .sidebar {
   position: fixed;
-  inset: 12px auto 12px 12px; /* dá respiro da borda da janela */
+  inset: 12px auto 12px 12px;
   width: var(--sb-collapsed);
-  background: color-mix(in oklab, var(--sidebar) 85%, transparent); /* fallback visualmente agradável */
+  background: color-mix(in oklab, var(--sidebar) 85%, transparent); 
   border: 1px solid color-mix(in oklab, var(--sidebar-2) 70%, transparent);
-  border-radius: 16px; /* cantos arredondados deixam mais moderno */
+  border-radius: 12px;
   display: grid;
   grid-template-rows: 1fr auto;
   transition: width var(--sb-dur) var(--sb-ease), box-shadow 200ms ease;
   will-change: width;
   z-index: 30;
 
-  /* glassy */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  /* sombra suave */
   box-shadow:
     0 10px 30px rgba(0,0,0,.24),
     0 2px 8px rgba(0,0,0,.18);
 
-  /* evita reflows grandes */
   contain: layout paint;
 }
 
@@ -29,16 +25,13 @@
   width: var(--sb-expanded);
 }
 
-/* rolagem invisível se o conteúdo crescer */
 .sidebar__content {
   overflow: auto;
   padding: 12px 8px;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 .sidebar__content::-webkit-scrollbar { display: none; } /* WebKit */
 
-
-/* ===== Brand / Header ===== */
 .sidebar__brand {
   display: flex;
   align-items: center;
@@ -62,7 +55,6 @@
   box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 20%, transparent);
 }
 
-/* animação suave do texto */
 .brand__text {
   display: grid;
   line-height: 1.1;
@@ -80,8 +72,6 @@
 .brand__title { font-weight: 700; font-size: .95rem; }
 .brand__subtitle { color: var(--muted); font-size: .75rem; margin-top: 2px; }
 
-
-/* ===== Navegação ===== */
 .sidebar__nav {
   display: grid;
   gap: 6px;
@@ -89,7 +79,6 @@
   padding-bottom: 8px;
 }
 
-/* botão base */
 .nav__item {
   all: unset;
   cursor: pointer;
@@ -108,14 +97,12 @@
     color 160ms ease;
 }
 
-/* hover com leve elevação */
 .nav__item:hover {
   background: color-mix(in oklab, #ffffff 8%, transparent);
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(0,0,0,.08);
 }
 
-/* estado ativo – use data-active="true" ou class (ajuste conforme seu JSX) */
 .nav__item[data-active="true"],
 .nav__item.is-active {
   background: color-mix(in oklab, var(--accent) 10%, transparent);
@@ -123,13 +110,11 @@
   box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 40%, transparent);
 }
 
-/* foco acessível */
 .nav__item:focus-visible {
   outline: 2px solid color-mix(in oklab, var(--accent) 65%, white 15%);
   outline-offset: 2px;
 }
 
-/* ícone com micro interação */
 .nav__icon {
   font-size: 18px;
   width: 28px;
@@ -139,7 +124,6 @@
 }
 .nav__item:hover .nav__icon { transform: scale(1.06); }
 
-/* label com fade/slide + pointer gating */
 .nav__label {
   font-size: .93rem;
   opacity: 0;
@@ -155,15 +139,12 @@
   pointer-events: auto;
 }
 
-/* stagger sutil nos itens quando expande */
 .sidebar.expanded .sidebar__nav .nav__item:nth-child(1) .nav__label { transition-delay: 30ms; }
 .sidebar.expanded .sidebar__nav .nav__item:nth-child(2) .nav__label { transition-delay: 60ms; }
 .sidebar.expanded .sidebar__nav .nav__item:nth-child(3) .nav__label { transition-delay: 90ms; }
 .sidebar.expanded .sidebar__nav .nav__item:nth-child(4) .nav__label { transition-delay: 120ms; }
 .sidebar.expanded .sidebar__nav .nav__item:nth-child(5) .nav__label { transition-delay: 150ms; }
 
-
-/* ===== Toggle ===== */
 .sidebar__toggle {
   all: unset;
   cursor: pointer;
@@ -184,7 +165,6 @@
   background: color-mix(in oklab, #0b131b 90%, transparent);
 }
 
-/* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
   .sidebar,
   .brand__text,

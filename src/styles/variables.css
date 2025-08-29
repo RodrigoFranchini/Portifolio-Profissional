@@ -1,5 +1,4 @@
 :root {
-  /* cores (tokens) */
   --bg:        #0f1821;
   --sidebar:   #17212b;
   --sidebar-2: #111a23;
@@ -7,7 +6,6 @@
   --muted:     #8a97a4;
   --accent:    #cbd5e1;
 
-  /* motion e medidas globais da sidebar (tokens) */
   --sb-collapsed: 72px;
   --sb-expanded:  240px;
   --sb-dur: 420ms;
