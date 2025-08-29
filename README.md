@@ -77,8 +77,7 @@ npm run dev
 ---
 
 ## ☁️ Link do site publicado (produção)
-Ainda não publicado.
- **TODO:** adicionar o link quando fizer o deploy 
+[Acesse meu portifólio](https://portifolio-profissional-virid.vercel.app/)
 
 ---
 
