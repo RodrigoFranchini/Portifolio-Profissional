@@ -30,7 +30,7 @@ export const projetos = [
       "API RESTful desenvolvida com Spring Boot, a API permite gerenciar cursos, sendo projetada para ser facilmente extensível.",
     tecnologias: ["Java", "Spring Boot", "H2"],
     github: "https://github.com/RodrigoFranchini/curso-api-spring",
-    imagem: "/public/Cursosapi.png" 
+    imagem: "Cursosapi.png" 
   },
   {
     id: "sistema-login-firebase",
@@ -39,7 +39,7 @@ export const projetos = [
       "Sistema de login utilizando a plataforma Firebase, permitindo aos usuários realizar cadastro e acesso direto.",
     tecnologias: ["HTML, CSS, Javascript", "Node.js", "Firebase"],
     github: "https://github.com/RodrigoFranchini/HOEX",
-    imagem: "/public/HOExtra.png" 
+    imagem: "HOExtra.png" 
   },
   {
     id: "desenvolvimento-web-full-stack",
@@ -48,7 +48,7 @@ export const projetos = [
       "Projeto de documentação e desenvolvimento de uma aplicação para a matéria Desenvolvimento Web.",
     tecnologias: ["React", "Node.js"],
     github: "https://github.com/RodrigoFranchini/Projeto-Dev.-Web-Full-Stack",
-    imagem: "/public/web-full-stack.png" 
+    imagem: "web-full-stack.png" 
   },
   {
     id: "java-atividades",
@@ -57,7 +57,7 @@ export const projetos = [
       "Coletânea de atividades desenvolvidas em Java e utilizando JFrame (GUI).",
     tecnologias: ["Java"],
     github: "https://github.com/RodrigoFranchini/Java-Atividades",
-    imagem: "/public/Java-Atividades.png" 
+    imagem: "Java-Atividades.png" 
   }
 ];
 
